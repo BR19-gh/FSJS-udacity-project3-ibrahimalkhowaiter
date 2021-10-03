@@ -9,7 +9,7 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-                <p class="card-text"><span class="product-name">{{ product.name }}</span> <span class="product-price">{{ product.price | currency: "EUR" }}</span></p>
+                <p class="card-text"><span class="product-name">{{ product.name }}</span> <span class="product-price">{{ product.price | currency: "﷼" }}</span></p>
                 <div class="product-quantity-and-button-container">
                     <input type="number" min="0" (input)="checkNumbers($event)" [(ngModel)]=product.quantity>
                     <button class="btn btn-dark" (click)="removeFromCart()">remove</button>
