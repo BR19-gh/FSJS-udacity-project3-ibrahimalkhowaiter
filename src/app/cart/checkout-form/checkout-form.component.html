@@ -11,7 +11,7 @@
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text" id="inputGroup-sizing-default">Credit Card</span>
-            <input type="text" name="creditCard" [(ngModel)]="creditCard" pattern="(\d{4}(\s)?){4}" placeholder="credit card number" minlength="16" required #card="ngModel" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <input type="number" name="creditCard" [(ngModel)]="creditCard" pattern="(\d{4}(\s)?){4}" placeholder="credit card number" minlength="16" required #card="ngModel" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <button class="btn btn-dark" type="submit" [disabled]="form.invalid || (this.cartCount$ | async) == 0">Order</button>
     </form>

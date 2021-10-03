@@ -14,6 +14,7 @@ export class CartService {
   count = new BehaviorSubject<number>(0);
   editedProducts = new BehaviorSubject<Product[]>([]);
   total: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  removeConter:number =0;
 
   constructor() { }
 
@@ -25,12 +26,15 @@ export class CartService {
       product.quantity += quantity;
       this.products.push(product);
     }
+    alert(`You added ${product.quantity} ${product.name} successfully to the cart`);
     this.count.next(this.getCount());
     this.editedProducts.next(this.products);
     this.total.next(this.getTotal());
   }
 
   remove(product: Product) {
+    if(this.removeConter==0){alert(`You removed ${product.name} successfully from the cart`);this.removeConter=1;}
+    else if(this.removeConter==1){this.removeConter=0;}
     product.quantity = 0;
     this.products = this.products.filter(p => p !== product);
     this.count.next(this.getCount());

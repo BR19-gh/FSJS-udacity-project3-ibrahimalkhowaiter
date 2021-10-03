@@ -10,7 +10,7 @@
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">{{ product.price | currency: "﷼" }}</p>
             <div class="product-quantity-and-button-container">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="quantity" (change)="setQuantity($event)">
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="quantity" (ngModelChange)="setQuantity($event)">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
