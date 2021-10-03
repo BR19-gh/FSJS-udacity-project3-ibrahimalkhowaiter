@@ -13,7 +13,7 @@
 
   
 
-This is an Angular application store that can do the following:
+This is an Angular application store that do the following:
 - Shows a list of products from `.json` file.
 
 - Shows product details view when clicked on product
@@ -154,3 +154,54 @@ The code is located in `/src` folder, and the transformed output is located in `
 
 
   
+  
+  
+  
+
+## Project Preview
+Store Homepage
+
+  
+
+![Store Homepage](https://github.com/BR19-gh/FSJS-udacity-project3-ibrahimalkhowaiter/blob/master/imgs/1.png)
+  
+
+Product Detail View
+
+  
+
+![Product Detail View](https://github.com/BR19-gh/FSJS-udacity-project3-ibrahimalkhowaiter/blob/master/imgs/2.png)
+
+Cart
+
+  
+
+![Cart](https://github.com/BR19-gh/FSJS-udacity-project3-ibrahimalkhowaiter/blob/master/imgs/3.png)
+
+Order Confirmation
+
+  
+
+![Order Confirmation](https://github.com/BR19-gh/FSJS-udacity-project3-ibrahimalkhowaiter/blob/master/imgs/4.png)
+
+
+##  Tools used
+
+
+-  [NodeJS](https://nodejs.org/en/)
+-  [Angular](https://angular.io/)
+-  [Bootstrap](https://getbootstrap.com/)
+
+  
+  
+  
+
+## Conclusion
+
+Thank you for reading this, hope it helps you a bit to handle your way on this app.
+
+> Project done by **Ibrahim Alkhowaiter**
+
+>  <br>
+
+> It was part of Udacity FSJS nano-degree program
