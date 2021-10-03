@@ -1,0 +1,4 @@
+.product-quantity-and-button-container{
+    display: flex;
+    justify-content: space-between;
+}

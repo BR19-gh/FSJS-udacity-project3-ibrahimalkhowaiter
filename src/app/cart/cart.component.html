@@ -1,0 +1,13 @@
+<div id="cart-container">
+    <div class="cart">
+        <h2>Your cart</h2>
+        <div style="margin-bottom: 50px;"></div>
+        <ul>
+            <app-cart-item *ngFor="let product of products$ | async" [product]="product" (removeItemFromCart)="removeCartItem($event)"></app-cart-item>
+        </ul>
+        <p style="font-weight:bold;" class="total-price" *ngIf="sum$ | async">Total: {{ (sum$ | async) | currency: "﷼" }}</p>
+        <p *ngIf="!(sum$ | async)">Nothing has been added yet to the cart...</p>
+    </div>
+
+    <app-checkout-form></app-checkout-form>
+</div>

@@ -1,0 +1,17 @@
+<div class="order-confirmation-container" style="display:block;" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Purchase Successed!</h5>
+          <button (click)="redirectToHome()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <p>Thank you, Dear <span class="confirmation-username">{{ order.userdata.fullname }}</span>!</p>
+            <p>Your order of the total <span class="confirmation-price">{{ total | currency: "﷼" }} </span>is confirmed, hope you enjoy your purchase.<br>Can't wait to see again!</p>
+        </div>
+        <div class="modal-footer">
+          <button (click)="redirectToHome()" type="button" class="btn btn-dark" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>

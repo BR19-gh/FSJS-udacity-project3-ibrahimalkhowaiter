@@ -1,0 +1,31 @@
+<div id="checkout-form-container">
+    <h3>Fill Your Details</h3>
+    <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Full Name</span>
+            <input  type="text" name="name" [(ngModel)]="name" placeholder="full name" pattern="([a-zA-Z\u0621-\u064A]+\s?)+" minlength="3" required #fullName="ngModel" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
+            <input type="text" name="address" [(ngModel)]="address" placeholder="address" pattern="([a-zA-Z0-9\u0621-\u064A]+\s?)+" minlenght="3" required #addressField="ngModel" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Credit Card</span>
+            <input type="text" name="creditCard" [(ngModel)]="creditCard" pattern="(\d{4}(\s)?){4}" placeholder="credit card number" minlength="16" required #card="ngModel" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <button class="btn btn-dark" type="submit" [disabled]="form.invalid || (this.cartCount$ | async) == 0">Order</button>
+    </form>
+
+    <div class="error-message" *ngIf="card.errors?.pattern">
+        Please Enter a Valid Credit Card Number (at least: 16 digits)
+    </div>
+    <div class="error-message" *ngIf="fullName.errors?.pattern">
+        Please Enter a Valid Name (at least: 3 letters)
+    </div>
+    <div class="error-message" *ngIf="addressField.errors?.pattern">
+        Please Enter a Valid Address (at least: 3 digits or 3 letters)
+    </div>
+    <div class="error-message" *ngIf="(this.cartCount$ | async) == 0">
+        Cart is Empty
+    </div>
+</div>

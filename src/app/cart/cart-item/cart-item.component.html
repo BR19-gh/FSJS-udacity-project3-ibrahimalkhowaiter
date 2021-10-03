@@ -1,0 +1,21 @@
+
+
+
+<div id="card-container">
+    <div class="card mb-3" style="max-width: 490px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{ product.url }}" class="card-img-top" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <p class="card-text"><span class="product-name">{{ product.name }}</span> <span class="product-price">{{ product.price | currency: "EUR" }}</span></p>
+                <div class="product-quantity-and-button-container">
+                    <input type="number" min="0" (input)="checkNumbers($event)" [(ngModel)]=product.quantity>
+                    <button class="btn btn-dark" (click)="removeFromCart()">remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

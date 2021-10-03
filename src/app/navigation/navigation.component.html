@@ -1,0 +1,12 @@
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-container">
+    <div class="container-fluid">
+     <div id="navbar-brand-container">
+      <a class="navbar-brand" (click)="makeUnactive()" routerLink="/">My Store</a>
+     </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div id="cart-container" class="navbar-nav">
+          <a id="cart" class="nav-link" (click)="makeActive()" routerLink="/cart"><i class="fas fa-shopping-cart"></i>({{ cartCount }})</a>
+        </div>
+      </div>
+    </div>
+  </nav>

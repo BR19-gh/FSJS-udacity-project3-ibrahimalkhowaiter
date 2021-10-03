@@ -1,0 +1,24 @@
+<div class="card" style="width: 18rem;">
+    <a routerLink="/product/{{ product.id }}">
+    <img src="{{ product.url }}" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">{{ product.price | currency: "﷼" }}</p>
+        <div class="product-quantity-and-button-container">
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="quantity" (change)="setQuantity($event)">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+      <a  (click)="addToCart()" class="btn btn-dark">Add to Cart</a>
+    </div>
+    </div>
+  </div>

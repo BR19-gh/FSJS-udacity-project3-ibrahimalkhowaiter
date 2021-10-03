@@ -1,0 +1,48 @@
+nav{
+    position:fixed;
+    z-index:1;
+    width:100%;
+    height: 10%;
+    margin-bottom: 10px;
+}
+.container-fluid{
+    display:flex;
+    justify-content:space-between;
+    width: 100%;
+   
+}
+
+#navbar-brand-container{
+    width: 50%;
+    justify-content: start;
+}
+
+#navbarNavAltMarkup{
+    width: 50%;
+    justify-content: end;
+}
+
+.animation{
+    animation: animation linear 200ms;
+    border-radius: 100px;
+}
+
+@keyframes animation {
+    0% {background-color:#008f8f00;
+        font-size:normal;
+        }
+
+    50% {background-color:#008f8f73;
+        font-size:large;
+        }
+
+    100% {background-color:#008f8f00;
+        font-size:normal;
+        }
+  }
+
+@media (min-width: 1px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+}}
